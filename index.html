@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hyperliquid - The Onchain Perpetuals Exchange</title>
+<meta name="description" content="Trade perpetual futures on Hyperliquid. Fast, transparent, and fully onchain. Access 300+ markets with up to 50x leverage.">
+<meta name="keywords" content="Hyperliquid, DeFi, perpetual futures, crypto trading, onchain exchange">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%2325D695'/%3E%3Ctext x='8' y='22' font-size='16' fill='white' font-weight='bold'%3EHL%3C/text%3E%3C/svg%3E">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0e17;color:#e2e8f0;line-height:1.6}
+a{color:#25D695;text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* Header */
+header{padding:20px 0;border-bottom:1px solid #1e2d3d}
+header .container{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.3rem;font-weight:700;color:#fff}
+.logo svg{width:32px;height:32px}
+nav{display:flex;gap:24px;font-size:.9rem}
+nav a{color:#94a3b8}
+nav a:hover{color:#fff;text-decoration:none}
+.btn{display:inline-block;padding:10px 24px;background:#25D695;color:#0a0e17;border-radius:8px;font-weight:600;font-size:.9rem;transition:all .2s}
+.btn:hover{background:#1fb880;text-decoration:none}
+
+/* Hero */
+.hero{padding:80px 0 60px;text-align:center}
+.hero h1{font-size:3rem;font-weight:800;letter-spacing:-.03em;margin-bottom:16px;background:linear-gradient(135deg,#fff,#25D695);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:1.2rem;color:#94a3b8;max-width:600px;margin:0 auto 32px}
+.hero-stats{display:flex;justify-content:center;gap:48px;margin-top:40px}
+.stat{text-align:center}
+.stat-val{font-size:2rem;font-weight:700;color:#fff}
+.stat-label{font-size:.8rem;color:#64748b;margin-top:4px}
+
+/* Features */
+.features{padding:80px 0;border-top:1px solid #1e2d3d}
+.features h2{text-align:center;font-size:2rem;margin-bottom:48px;color:#fff}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feature{background:#111827;border:1px solid #1e2d3d;border-radius:12px;padding:32px;transition:border-color .2s}
+.feature:hover{border-color:#25D695}
+.feature h3{font-size:1.1rem;margin-bottom:8px;color:#fff}
+.feature p{font-size:.9rem;color:#94a3b8}
+.feature-icon{font-size:2rem;margin-bottom:16px}
+
+/* Markets */
+.markets{padding:60px 0;border-top:1px solid #1e2d3d}
+.markets h2{text-align:center;font-size:2rem;margin-bottom:16px;color:#fff}
+.markets>p{text-align:center;color:#94a3b8;margin-bottom:32px}
+.market-list{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.market-tag{background:#111827;border:1px solid #1e2d3d;padding:8px 16px;border-radius:8px;font-size:.85rem;color:#e2e8f0}
+
+/* CTA */
+.cta{padding:80px 0;text-align:center;border-top:1px solid #1e2d3d}
+.cta h2{font-size:2rem;margin-bottom:16px;color:#fff}
+.cta p{color:#94a3b8;margin-bottom:32px}
+
+/* Footer */
+footer{padding:40px 0;border-top:1px solid #1e2d3d;color:#64748b;font-size:.8rem}
+footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-links{display:flex;gap:20px}
+.footer-links a{color:#64748b;font-size:.8rem}
+
+@media(max-width:768px){
+  .hero h1{font-size:2rem}
+  .feature-grid{grid-template-columns:1fr}
+  .hero-stats{flex-direction:column;gap:24px}
+  nav{display:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#25D695"/><text x="8" y="22" font-size="16" fill="white" font-weight="bold">HL</text></svg>
+      Hyperliquid
+    </div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#markets">Markets</a>
+      <a href="https://hyperliquid.xyz/docs" target="_blank">Docs</a>
+      <a href="https://stats.hyperliquid.xyz" target="_blank">Stats</a>
+    </nav>
+    <a href="https://app.hyperliquid.xyz" class="btn" target="_blank">Launch App</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>The Onchain Order Book<br>for Perpetual Futures</h1>
+    <p>Trade with deep liquidity, transparent execution, and zero gas fees. Built on Hyperliquid L1 — the high-performance blockchain purpose-built for finance.</p>
+    <a href="https://app.hyperliquid.xyz" class="btn" target="_blank">Start Trading</a>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-val">$3.2B+</div><div class="stat-label">24h Volume</div></div>
+      <div class="stat"><div class="stat-val">300+</div><div class="stat-label">Markets</div></div>
+      <div class="stat"><div class="stat-val">200K+</div><div class="stat-label">Users</div></div>
+      <div class="stat"><div class="stat-val">$2B+</div><div class="stat-label">TVL</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="container">
+    <h2>Why Hyperliquid?</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>Sub-Second Finality</h3>
+        <p>Execute trades in under 1 second with Hyperliquid's custom L1 consensus. No waiting, no slippage from delays.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔒</div>
+        <h3>Fully Non-Custodial</h3>
+        <p>Your keys, your funds. All trading happens onchain with transparent order matching and settlement.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">💰</div>
+        <h3>Zero Gas Fees</h3>
+        <p>Trade without worrying about gas costs. Hyperliquid L1 subsidizes all transaction fees for traders.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📊</div>
+        <h3>Deep Liquidity</h3>
+        <p>Access institutional-grade liquidity across 300+ perpetual and spot markets with tight spreads.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🌐</div>
+        <h3>Cross-Margin</h3>
+        <p>Efficiently use your capital with cross-margin mode. All positions share the same collateral pool.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🏗️</div>
+        <h3>Builder Ecosystem</h3>
+        <p>Build on top of Hyperliquid with APIs, SDKs, and builder codes. Earn fees from the users you bring.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="markets" id="markets">
+  <div class="container">
+    <h2>Popular Markets</h2>
+    <p>Trade hundreds of assets with up to 50x leverage</p>
+    <div class="market-list">
+      <span class="market-tag">BTC-USDC</span>
+      <span class="market-tag">ETH-USDC</span>
+      <span class="market-tag">SOL-USDC</span>
+      <span class="market-tag">HYPE-USDC</span>
+      <span class="market-tag">ARB-USDC</span>
+      <span class="market-tag">DOGE-USDC</span>
+      <span class="market-tag">AVAX-USDC</span>
+      <span class="market-tag">LINK-USDC</span>
+      <span class="market-tag">OP-USDC</span>
+      <span class="market-tag">MATIC-USDC</span>
+      <span class="market-tag">SUI-USDC</span>
+      <span class="market-tag">APT-USDC</span>
+      <span class="market-tag">+280 more</span>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Start Trading Today</h2>
+    <p>Join 200,000+ traders on the fastest onchain perpetuals exchange.</p>
+    <a href="https://app.hyperliquid.xyz" class="btn" target="_blank">Launch App</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>&copy; 2026 Hyperliquid. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Service</a>
+      <a href="https://x.com/HyperliquidX" target="_blank">Twitter</a>
+      <a href="https://discord.gg/hyperliquid" target="_blank">Discord</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
