@@ -3,70 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hyperliquid - The Onchain Perpetuals Exchange</title>
-<meta name="description" content="Trade perpetual futures on Hyperliquid. Fast, transparent, and fully onchain. Access 300+ markets with up to 50x leverage.">
-<meta name="keywords" content="Hyperliquid, DeFi, perpetual futures, crypto trading, onchain exchange">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%2325D695'/%3E%3Ctext x='8' y='22' font-size='16' fill='white' font-weight='bold'%3EHL%3C/text%3E%3C/svg%3E">
+<title>CryptoInsight - Your Guide to DeFi & Crypto Trading</title>
+<meta name="description" content="Learn about cryptocurrency trading, DeFi protocols, blockchain technology, and market analysis. Expert guides for beginners and advanced traders.">
+<meta name="keywords" content="crypto, DeFi, trading, blockchain, bitcoin, ethereum, perpetual futures, decentralized finance, crypto guide">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%232563eb'/%3E%3Ctext x='6' y='22' font-size='14' fill='white' font-weight='bold'%3ECI%3C/text%3E%3C/svg%3E">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0e17;color:#e2e8f0;line-height:1.6}
-a{color:#25D695;text-decoration:none}
+body{font-family:'Georgia','Times New Roman',serif;background:#fafafa;color:#1a1a2e;line-height:1.8}
+a{color:#2563eb;text-decoration:none}
 a:hover{text-decoration:underline}
-.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.container{max-width:900px;margin:0 auto;padding:0 20px}
 
-/* Header */
-header{padding:20px 0;border-bottom:1px solid #1e2d3d}
+header{background:#fff;border-bottom:1px solid #e5e7eb;padding:16px 0}
 header .container{display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:10px;font-size:1.3rem;font-weight:700;color:#fff}
-.logo svg{width:32px;height:32px}
-nav{display:flex;gap:24px;font-size:.9rem}
-nav a{color:#94a3b8}
-nav a:hover{color:#fff;text-decoration:none}
-.btn{display:inline-block;padding:10px 24px;background:#25D695;color:#0a0e17;border-radius:8px;font-weight:600;font-size:.9rem;transition:all .2s}
-.btn:hover{background:#1fb880;text-decoration:none}
+.logo{font-size:1.3rem;font-weight:700;color:#1a1a2e;font-family:-apple-system,sans-serif}
+.logo span{color:#2563eb}
+nav{display:flex;gap:20px;font-size:.9rem;font-family:-apple-system,sans-serif}
+nav a{color:#64748b}
+nav a:hover{color:#1a1a2e;text-decoration:none}
 
-/* Hero */
-.hero{padding:80px 0 60px;text-align:center}
-.hero h1{font-size:3rem;font-weight:800;letter-spacing:-.03em;margin-bottom:16px;background:linear-gradient(135deg,#fff,#25D695);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{font-size:1.2rem;color:#94a3b8;max-width:600px;margin:0 auto 32px}
-.hero-stats{display:flex;justify-content:center;gap:48px;margin-top:40px}
-.stat{text-align:center}
-.stat-val{font-size:2rem;font-weight:700;color:#fff}
-.stat-label{font-size:.8rem;color:#64748b;margin-top:4px}
+.hero{padding:60px 0 40px;text-align:center;border-bottom:1px solid #e5e7eb}
+.hero h1{font-size:2.4rem;font-weight:700;color:#1a1a2e;margin-bottom:12px;letter-spacing:-.02em}
+.hero p{font-size:1.1rem;color:#64748b;max-width:600px;margin:0 auto;font-family:-apple-system,sans-serif}
 
-/* Features */
-.features{padding:80px 0;border-top:1px solid #1e2d3d}
-.features h2{text-align:center;font-size:2rem;margin-bottom:48px;color:#fff}
-.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.feature{background:#111827;border:1px solid #1e2d3d;border-radius:12px;padding:32px;transition:border-color .2s}
-.feature:hover{border-color:#25D695}
-.feature h3{font-size:1.1rem;margin-bottom:8px;color:#fff}
-.feature p{font-size:.9rem;color:#94a3b8}
-.feature-icon{font-size:2rem;margin-bottom:16px}
+.posts{padding:48px 0}
+.post{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:32px;margin-bottom:24px;transition:box-shadow .2s}
+.post:hover{box-shadow:0 4px 12px rgba(0,0,0,.06)}
+.post-meta{font-size:.8rem;color:#94a3b8;margin-bottom:8px;font-family:-apple-system,sans-serif}
+.post-meta span{background:#eff6ff;color:#2563eb;padding:2px 8px;border-radius:4px;font-size:.75rem;font-weight:500;margin-right:6px}
+.post h2{font-size:1.4rem;color:#1a1a2e;margin-bottom:10px;line-height:1.4}
+.post h2 a{color:#1a1a2e}
+.post h2 a:hover{color:#2563eb;text-decoration:none}
+.post p{color:#4b5563;font-size:.95rem}
+.read-more{display:inline-block;margin-top:12px;font-size:.85rem;font-weight:500;font-family:-apple-system,sans-serif;color:#2563eb}
 
-/* Markets */
-.markets{padding:60px 0;border-top:1px solid #1e2d3d}
-.markets h2{text-align:center;font-size:2rem;margin-bottom:16px;color:#fff}
-.markets>p{text-align:center;color:#94a3b8;margin-bottom:32px}
-.market-list{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
-.market-tag{background:#111827;border:1px solid #1e2d3d;padding:8px 16px;border-radius:8px;font-size:.85rem;color:#e2e8f0}
+.sidebar-section{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:24px;margin-bottom:20px}
+.sidebar-section h3{font-size:1rem;font-weight:600;margin-bottom:12px;color:#1a1a2e;font-family:-apple-system,sans-serif}
+.sidebar-section ul{list-style:none;font-size:.85rem;font-family:-apple-system,sans-serif}
+.sidebar-section li{padding:6px 0;border-bottom:1px solid #f1f5f9}
+.sidebar-section li:last-child{border:none}
 
-/* CTA */
-.cta{padding:80px 0;text-align:center;border-top:1px solid #1e2d3d}
-.cta h2{font-size:2rem;margin-bottom:16px;color:#fff}
-.cta p{color:#94a3b8;margin-bottom:32px}
+.two-col{display:grid;grid-template-columns:2fr 1fr;gap:32px}
 
-/* Footer */
-footer{padding:40px 0;border-top:1px solid #1e2d3d;color:#64748b;font-size:.8rem}
-footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-.footer-links{display:flex;gap:20px}
-.footer-links a{color:#64748b;font-size:.8rem}
+.newsletter{background:#1a1a2e;border-radius:12px;padding:40px;text-align:center;margin:40px 0}
+.newsletter h2{color:#fff;font-size:1.5rem;margin-bottom:8px}
+.newsletter p{color:#94a3b8;margin-bottom:20px;font-family:-apple-system,sans-serif;font-size:.9rem}
+.newsletter-form{display:flex;justify-content:center;gap:8px;max-width:400px;margin:0 auto}
+.newsletter-form input{flex:1;padding:10px 16px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#fff;font-size:.9rem}
+.newsletter-form button{padding:10px 20px;border-radius:8px;background:#2563eb;color:#fff;border:none;font-weight:600;cursor:pointer;font-size:.9rem}
+
+footer{padding:32px 0;border-top:1px solid #e5e7eb;color:#94a3b8;font-size:.8rem;font-family:-apple-system,sans-serif}
+footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-links{display:flex;gap:16px}
+.footer-links a{color:#94a3b8}
 
 @media(max-width:768px){
-  .hero h1{font-size:2rem}
-  .feature-grid{grid-template-columns:1fr}
-  .hero-stats{flex-direction:column;gap:24px}
+  .two-col{grid-template-columns:1fr}
+  .hero h1{font-size:1.8rem}
   nav{display:none}
+  .newsletter-form{flex-direction:column}
 }
 </style>
 </head>
@@ -74,110 +69,130 @@ footer .container{display:flex;justify-content:space-between;align-items:center;
 
 <header>
   <div class="container">
-    <div class="logo">
-      <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#25D695"/><text x="8" y="22" font-size="16" fill="white" font-weight="bold">HL</text></svg>
-      Hyperliquid
-    </div>
+    <div class="logo">Crypto<span>Insight</span></div>
     <nav>
-      <a href="#features">Features</a>
-      <a href="#markets">Markets</a>
-      <a href="https://hyperliquid.xyz/docs" target="_blank">Docs</a>
-      <a href="https://stats.hyperliquid.xyz" target="_blank">Stats</a>
+      <a href="/">Home</a>
+      <a href="#guides">Guides</a>
+      <a href="#defi">DeFi</a>
+      <a href="#trading">Trading</a>
+      <a href="#news">News</a>
     </nav>
-    <a href="https://app.hyperliquid.xyz" class="btn" target="_blank">Launch App</a>
   </div>
 </header>
 
 <section class="hero">
   <div class="container">
-    <h1>The Onchain Order Book<br>for Perpetual Futures</h1>
-    <p>Trade with deep liquidity, transparent execution, and zero gas fees. Built on Hyperliquid L1 — the high-performance blockchain purpose-built for finance.</p>
-    <a href="https://app.hyperliquid.xyz" class="btn" target="_blank">Start Trading</a>
-    <div class="hero-stats">
-      <div class="stat"><div class="stat-val">$3.2B+</div><div class="stat-label">24h Volume</div></div>
-      <div class="stat"><div class="stat-val">300+</div><div class="stat-label">Markets</div></div>
-      <div class="stat"><div class="stat-val">200K+</div><div class="stat-label">Users</div></div>
-      <div class="stat"><div class="stat-val">$2B+</div><div class="stat-label">TVL</div></div>
-    </div>
+    <h1>Your Guide to Crypto Trading & DeFi</h1>
+    <p>Expert analysis, educational guides, and the latest insights on cryptocurrency, decentralized finance, and blockchain technology.</p>
   </div>
 </section>
 
-<section class="features" id="features">
+<section class="posts">
   <div class="container">
-    <h2>Why Hyperliquid?</h2>
-    <div class="feature-grid">
-      <div class="feature">
-        <div class="feature-icon">⚡</div>
-        <h3>Sub-Second Finality</h3>
-        <p>Execute trades in under 1 second with Hyperliquid's custom L1 consensus. No waiting, no slippage from delays.</p>
+    <div class="two-col">
+      <div>
+
+        <article class="post">
+          <div class="post-meta"><span>DeFi</span> September 4, 2026 &middot; 8 min read</div>
+          <h2><a href="#">What Are Perpetual Futures? A Complete Guide for Beginners</a></h2>
+          <p>Perpetual futures are one of the most popular instruments in crypto trading. Unlike traditional futures, they never expire, allowing traders to hold positions indefinitely. Learn how they work, how funding rates maintain price alignment, and why platforms like Hyperliquid have made them accessible to everyone.</p>
+          <a class="read-more" href="#">Read more &rarr;</a>
+        </article>
+
+        <article class="post">
+          <div class="post-meta"><span>Trading</span> September 3, 2026 &middot; 6 min read</div>
+          <h2><a href="#">Understanding Leverage in Crypto: Risks and Rewards</a></h2>
+          <p>Leverage allows traders to multiply their exposure to market movements, but it comes with significant risks. This guide covers how leverage works on decentralized exchanges, margin requirements, liquidation prices, and strategies to manage risk effectively when trading with 5x, 10x, or higher leverage.</p>
+          <a class="read-more" href="#">Read more &rarr;</a>
+        </article>
+
+        <article class="post">
+          <div class="post-meta"><span>Blockchain</span> September 2, 2026 &middot; 10 min read</div>
+          <h2><a href="#">How Onchain Order Books Are Changing DeFi Trading</a></h2>
+          <p>Traditional DEXs use Automated Market Makers (AMMs), but a new generation of protocols is bringing fully onchain order books to DeFi. Learn how platforms achieve sub-second execution, transparent matching, and zero gas fees while maintaining the security benefits of decentralization.</p>
+          <a class="read-more" href="#">Read more &rarr;</a>
+        </article>
+
+        <article class="post">
+          <div class="post-meta"><span>Guide</span> September 1, 2026 &middot; 5 min read</div>
+          <h2><a href="#">WalletConnect Explained: How to Safely Connect Your Wallet</a></h2>
+          <p>WalletConnect is the standard protocol for connecting mobile wallets to decentralized applications. This guide walks you through how it works, security best practices, how to verify dApp connections, and what to do if you suspect unauthorized access to your wallet.</p>
+          <a class="read-more" href="#">Read more &rarr;</a>
+        </article>
+
+        <article class="post">
+          <div class="post-meta"><span>Analysis</span> August 30, 2026 &middot; 7 min read</div>
+          <h2><a href="#">Top 5 Layer 1 Blockchains for DeFi in 2026</a></h2>
+          <p>The Layer 1 landscape continues to evolve rapidly. We compare Ethereum, Solana, Avalanche, Arbitrum, and emerging chains built specifically for financial applications. Discover which L1s offer the best performance, lowest fees, and strongest developer ecosystems for DeFi users.</p>
+          <a class="read-more" href="#">Read more &rarr;</a>
+        </article>
+
+        <article class="post">
+          <div class="post-meta"><span>Education</span> August 28, 2026 &middot; 9 min read</div>
+          <h2><a href="#">Non-Custodial vs Custodial Exchanges: What You Need to Know</a></h2>
+          <p>After several high-profile exchange collapses, more traders are moving to non-custodial solutions. Learn the fundamental differences between custodial and non-custodial exchanges, the trade-offs involved, and why self-custody is becoming the preferred choice for serious traders.</p>
+          <a class="read-more" href="#">Read more &rarr;</a>
+        </article>
+
+        <article class="post">
+          <div class="post-meta"><span>DeFi</span> August 26, 2026 &middot; 6 min read</div>
+          <h2><a href="#">Staking Rewards in 2026: Where to Earn Passive Income with Crypto</a></h2>
+          <p>Staking remains one of the most reliable ways to earn passive income in crypto. We review the best staking opportunities across major networks, expected APY ranges, lock-up periods, and the risks you should consider before delegating your tokens.</p>
+          <a class="read-more" href="#">Read more &rarr;</a>
+        </article>
+
       </div>
-      <div class="feature">
-        <div class="feature-icon">🔒</div>
-        <h3>Fully Non-Custodial</h3>
-        <p>Your keys, your funds. All trading happens onchain with transparent order matching and settlement.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">💰</div>
-        <h3>Zero Gas Fees</h3>
-        <p>Trade without worrying about gas costs. Hyperliquid L1 subsidizes all transaction fees for traders.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">📊</div>
-        <h3>Deep Liquidity</h3>
-        <p>Access institutional-grade liquidity across 300+ perpetual and spot markets with tight spreads.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">🌐</div>
-        <h3>Cross-Margin</h3>
-        <p>Efficiently use your capital with cross-margin mode. All positions share the same collateral pool.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">🏗️</div>
-        <h3>Builder Ecosystem</h3>
-        <p>Build on top of Hyperliquid with APIs, SDKs, and builder codes. Earn fees from the users you bring.</p>
+
+      <aside>
+        <div class="sidebar-section">
+          <h3>Popular Topics</h3>
+          <ul>
+            <li><a href="#">Perpetual Futures Trading</a></li>
+            <li><a href="#">DeFi Yield Strategies</a></li>
+            <li><a href="#">Wallet Security Guide</a></li>
+            <li><a href="#">Crypto Tax Basics</a></li>
+            <li><a href="#">L1 vs L2 Comparison</a></li>
+            <li><a href="#">Airdrop Farming Guide</a></li>
+            <li><a href="#">Cross-Chain Bridges</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-section">
+          <h3>About CryptoInsight</h3>
+          <p style="font-size:.85rem;color:#64748b;font-family:-apple-system,sans-serif">CryptoInsight is an independent publication covering cryptocurrency, DeFi, and blockchain technology. We provide educational content and market analysis to help traders make informed decisions.</p>
+        </div>
+        <div class="sidebar-section">
+          <h3>Market Overview</h3>
+          <ul>
+            <li>BTC: $82,400 <span style="color:#16a34a">+2.3%</span></li>
+            <li>ETH: $2,450 <span style="color:#16a34a">+1.8%</span></li>
+            <li>SOL: $103 <span style="color:#dc2626">-0.9%</span></li>
+            <li>HYPE: $28.50 <span style="color:#16a34a">+5.2%</span></li>
+            <li>Total Market: $3.2T</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <div class="newsletter">
+      <h2>Stay Updated</h2>
+      <p>Get the latest crypto insights delivered to your inbox weekly.</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="your@email.com">
+        <button>Subscribe</button>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="markets" id="markets">
-  <div class="container">
-    <h2>Popular Markets</h2>
-    <p>Trade hundreds of assets with up to 50x leverage</p>
-    <div class="market-list">
-      <span class="market-tag">BTC-USDC</span>
-      <span class="market-tag">ETH-USDC</span>
-      <span class="market-tag">SOL-USDC</span>
-      <span class="market-tag">HYPE-USDC</span>
-      <span class="market-tag">ARB-USDC</span>
-      <span class="market-tag">DOGE-USDC</span>
-      <span class="market-tag">AVAX-USDC</span>
-      <span class="market-tag">LINK-USDC</span>
-      <span class="market-tag">OP-USDC</span>
-      <span class="market-tag">MATIC-USDC</span>
-      <span class="market-tag">SUI-USDC</span>
-      <span class="market-tag">APT-USDC</span>
-      <span class="market-tag">+280 more</span>
-    </div>
-  </div>
-</section>
-
-<section class="cta">
-  <div class="container">
-    <h2>Start Trading Today</h2>
-    <p>Join 200,000+ traders on the fastest onchain perpetuals exchange.</p>
-    <a href="https://app.hyperliquid.xyz" class="btn" target="_blank">Launch App</a>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <span>&copy; 2026 Hyperliquid. All rights reserved.</span>
+    <span>&copy; 2026 CryptoInsight. All rights reserved. For educational purposes only.</span>
     <div class="footer-links">
       <a href="/privacy">Privacy Policy</a>
-      <a href="/terms">Terms of Service</a>
-      <a href="https://x.com/HyperliquidX" target="_blank">Twitter</a>
-      <a href="https://discord.gg/hyperliquid" target="_blank">Discord</a>
+      <a href="/terms">Terms</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
     </div>
   </div>
 </footer>
