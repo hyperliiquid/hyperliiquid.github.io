@@ -3,65 +3,139 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CryptoInsight - Your Guide to DeFi & Crypto Trading</title>
-<meta name="description" content="Learn about cryptocurrency trading, DeFi protocols, blockchain technology, and market analysis. Expert guides for beginners and advanced traders.">
-<meta name="keywords" content="crypto, DeFi, trading, blockchain, bitcoin, ethereum, perpetual futures, decentralized finance, crypto guide">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%232563eb'/%3E%3Ctext x='6' y='22' font-size='14' fill='white' font-weight='bold'%3ECI%3C/text%3E%3C/svg%3E">
+<title>CryptoInsight - Crypto Trading Education, DeFi Research & Market Analysis</title>
+<meta name="description" content="Expert crypto trading guides, DeFi protocol reviews, blockchain research, and daily market analysis. Join 50,000+ readers making smarter trading decisions.">
+<meta name="keywords" content="crypto trading, DeFi, decentralized finance, perpetual futures, blockchain, bitcoin, ethereum, trading guide, crypto education, market analysis">
+<meta property="og:title" content="CryptoInsight - Your Guide to Crypto Trading & DeFi">
+<meta property="og:description" content="Expert analysis, educational guides, and market insights on cryptocurrency and decentralized finance.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hyperliiquid.github.io">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://hyperliiquid.github.io">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e40af'/%3E%3Ctext x='4' y='23' font-size='15' fill='white' font-weight='bold' font-family='Arial'%3ECI%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Georgia','Times New Roman',serif;background:#fafafa;color:#1a1a2e;line-height:1.8}
-a{color:#2563eb;text-decoration:none}
-a:hover{text-decoration:underline}
-.container{max-width:900px;margin:0 auto;padding:0 20px}
+body{font-family:'Merriweather',Georgia,serif;background:#f8fafc;color:#1e293b;line-height:1.8}
+a{color:#1e40af;text-decoration:none}
+a:hover{color:#1d4ed8;text-decoration:underline}
+img{max-width:100%}
+.container{max-width:1080px;margin:0 auto;padding:0 24px}
+.sf{font-family:'Inter',-apple-system,sans-serif}
 
-header{background:#fff;border-bottom:1px solid #e5e7eb;padding:16px 0}
+/* Header */
+header{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 0;position:sticky;top:0;z-index:10;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 header .container{display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:1.3rem;font-weight:700;color:#1a1a2e;font-family:-apple-system,sans-serif}
-.logo span{color:#2563eb}
-nav{display:flex;gap:20px;font-size:.9rem;font-family:-apple-system,sans-serif}
-nav a{color:#64748b}
-nav a:hover{color:#1a1a2e;text-decoration:none}
+.logo{font-family:'Inter',sans-serif;font-size:1.25rem;font-weight:800;color:#0f172a;display:flex;align-items:center;gap:8px}
+.logo i{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:#1e40af;color:#fff;border-radius:6px;font-style:normal;font-size:.8rem;font-weight:700}
+nav{display:flex;gap:24px;font-size:.85rem;font-family:'Inter',sans-serif;font-weight:500}
+nav a{color:#475569;transition:color .15s}
+nav a:hover{color:#0f172a;text-decoration:none}
+nav a.active{color:#1e40af}
+.search{padding:7px 14px;border:1px solid #e2e8f0;border-radius:8px;font-size:.82rem;color:#94a3b8;background:#f8fafc;font-family:'Inter',sans-serif;cursor:pointer;transition:border-color .15s}
+.search:hover{border-color:#cbd5e1}
 
-.hero{padding:60px 0 40px;text-align:center;border-bottom:1px solid #e5e7eb}
-.hero h1{font-size:2.4rem;font-weight:700;color:#1a1a2e;margin-bottom:12px;letter-spacing:-.02em}
-.hero p{font-size:1.1rem;color:#64748b;max-width:600px;margin:0 auto;font-family:-apple-system,sans-serif}
+/* Featured */
+.featured{padding:48px 0 32px;border-bottom:1px solid #e2e8f0}
+.featured-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:24px}
+.featured-main{background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;transition:box-shadow .2s}
+.featured-main:hover{box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.featured-img{height:240px;background:linear-gradient(135deg,#1e3a5f,#0f172a);display:flex;align-items:center;justify-content:center;color:#fff;font-size:3rem;position:relative}
+.featured-img::after{content:'FEATURED';position:absolute;top:16px;left:16px;background:#1e40af;color:#fff;font-family:'Inter',sans-serif;font-size:.65rem;font-weight:700;padding:3px 10px;border-radius:4px;letter-spacing:.05em}
+.featured-body{padding:24px}
+.featured-body .tag{display:inline-block;font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;color:#1e40af;background:#eff6ff;padding:3px 10px;border-radius:4px;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em}
+.featured-body h2{font-size:1.5rem;line-height:1.35;margin-bottom:10px;color:#0f172a}
+.featured-body h2 a{color:inherit}
+.featured-body h2 a:hover{color:#1e40af;text-decoration:none}
+.featured-body p{color:#475569;font-size:.9rem;line-height:1.7}
+.featured-meta{margin-top:14px;font-family:'Inter',sans-serif;font-size:.75rem;color:#94a3b8;display:flex;align-items:center;gap:12px}
+.featured-meta .author{color:#475569;font-weight:500}
 
-.posts{padding:48px 0}
-.post{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:32px;margin-bottom:24px;transition:box-shadow .2s}
-.post:hover{box-shadow:0 4px 12px rgba(0,0,0,.06)}
-.post-meta{font-size:.8rem;color:#94a3b8;margin-bottom:8px;font-family:-apple-system,sans-serif}
-.post-meta span{background:#eff6ff;color:#2563eb;padding:2px 8px;border-radius:4px;font-size:.75rem;font-weight:500;margin-right:6px}
-.post h2{font-size:1.4rem;color:#1a1a2e;margin-bottom:10px;line-height:1.4}
-.post h2 a{color:#1a1a2e}
-.post h2 a:hover{color:#2563eb;text-decoration:none}
-.post p{color:#4b5563;font-size:.95rem}
-.read-more{display:inline-block;margin-top:12px;font-size:.85rem;font-weight:500;font-family:-apple-system,sans-serif;color:#2563eb}
+.featured-side{display:flex;flex-direction:column;gap:16px}
+.featured-sm{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px;transition:box-shadow .2s;flex:1}
+.featured-sm:hover{box-shadow:0 4px 12px rgba(0,0,0,.05)}
+.featured-sm .tag{display:inline-block;font-family:'Inter',sans-serif;font-size:.65rem;font-weight:600;color:#1e40af;background:#eff6ff;padding:2px 8px;border-radius:4px;margin-bottom:6px;text-transform:uppercase}
+.featured-sm h3{font-size:1rem;line-height:1.4;color:#0f172a;margin-bottom:6px}
+.featured-sm h3 a{color:inherit}
+.featured-sm h3 a:hover{color:#1e40af;text-decoration:none}
+.featured-sm p{font-size:.82rem;color:#64748b;line-height:1.6}
+.featured-sm .featured-meta{margin-top:8px}
 
-.sidebar-section{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:24px;margin-bottom:20px}
-.sidebar-section h3{font-size:1rem;font-weight:600;margin-bottom:12px;color:#1a1a2e;font-family:-apple-system,sans-serif}
-.sidebar-section ul{list-style:none;font-size:.85rem;font-family:-apple-system,sans-serif}
-.sidebar-section li{padding:6px 0;border-bottom:1px solid #f1f5f9}
-.sidebar-section li:last-child{border:none}
+/* Main content */
+.main{padding:40px 0}
+.two-col{display:grid;grid-template-columns:1fr 340px;gap:40px}
 
-.two-col{display:grid;grid-template-columns:2fr 1fr;gap:32px}
+.section-title{font-family:'Inter',sans-serif;font-size:1rem;font-weight:700;color:#0f172a;margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid #1e40af;display:inline-block}
 
-.newsletter{background:#1a1a2e;border-radius:12px;padding:40px;text-align:center;margin:40px 0}
-.newsletter h2{color:#fff;font-size:1.5rem;margin-bottom:8px}
-.newsletter p{color:#94a3b8;margin-bottom:20px;font-family:-apple-system,sans-serif;font-size:.9rem}
-.newsletter-form{display:flex;justify-content:center;gap:8px;max-width:400px;margin:0 auto}
-.newsletter-form input{flex:1;padding:10px 16px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#fff;font-size:.9rem}
-.newsletter-form button{padding:10px 20px;border-radius:8px;background:#2563eb;color:#fff;border:none;font-weight:600;cursor:pointer;font-size:.9rem}
+.post{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:24px;margin-bottom:16px;transition:box-shadow .2s}
+.post:hover{box-shadow:0 4px 12px rgba(0,0,0,.05)}
+.post .tag{display:inline-block;font-family:'Inter',sans-serif;font-size:.65rem;font-weight:600;color:#1e40af;background:#eff6ff;padding:2px 8px;border-radius:4px;margin-bottom:8px;text-transform:uppercase;letter-spacing:.03em}
+.post h2{font-size:1.2rem;line-height:1.4;margin-bottom:8px;color:#0f172a}
+.post h2 a{color:inherit}
+.post h2 a:hover{color:#1e40af;text-decoration:none}
+.post p{color:#475569;font-size:.88rem}
+.post .meta{margin-top:10px;font-family:'Inter',sans-serif;font-size:.75rem;color:#94a3b8;display:flex;align-items:center;gap:16px}
+.post .meta .author{color:#475569;font-weight:500}
+.read-more{font-family:'Inter',sans-serif;font-size:.8rem;font-weight:600;color:#1e40af;display:inline-flex;align-items:center;gap:4px;margin-top:10px}
 
-footer{padding:32px 0;border-top:1px solid #e5e7eb;color:#94a3b8;font-size:.8rem;font-family:-apple-system,sans-serif}
-footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.footer-links{display:flex;gap:16px}
-.footer-links a{color:#94a3b8}
+/* Sidebar */
+.sidebar{display:flex;flex-direction:column;gap:20px}
+.widget{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px;font-family:'Inter',sans-serif}
+.widget h3{font-size:.85rem;font-weight:700;color:#0f172a;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid #f1f5f9}
+.widget ul{list-style:none;font-size:.82rem}
+.widget li{padding:8px 0;border-bottom:1px solid #f8fafc;color:#475569}
+.widget li:last-child{border:none}
+.widget li a{color:#1e293b;font-weight:500}
+.widget li a:hover{color:#1e40af}
+.widget li .num{color:#94a3b8;font-size:.75rem;margin-right:6px;font-weight:600}
+.widget p{font-size:.82rem;color:#64748b;line-height:1.6}
 
-@media(max-width:768px){
+.widget-cta{background:linear-gradient(135deg,#1e3a5f,#0f172a);color:#fff;border:none}
+.widget-cta h3{color:#fff;border-color:rgba(255,255,255,.1)}
+.widget-cta p{color:#94a3b8}
+.widget-cta .btn{display:inline-block;padding:8px 20px;background:#2563eb;color:#fff;border-radius:6px;font-size:.8rem;font-weight:600;margin-top:10px;transition:background .15s}
+.widget-cta .btn:hover{background:#1d4ed8;text-decoration:none}
+
+.market-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #f8fafc;font-size:.82rem}
+.market-row:last-child{border:none}
+.market-name{font-weight:600;color:#0f172a}
+.market-price{color:#475569}
+.market-change{font-weight:600;font-size:.78rem;padding:2px 6px;border-radius:4px}
+.up{color:#16a34a;background:#f0fdf4}
+.down{color:#dc2626;background:#fef2f2}
+
+/* Newsletter */
+.newsletter{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:48px;text-align:center;margin:32px 0}
+.newsletter h2{font-size:1.6rem;color:#0f172a;margin-bottom:8px}
+.newsletter p{color:#64748b;font-family:'Inter',sans-serif;font-size:.9rem;margin-bottom:20px}
+.nl-form{display:flex;justify-content:center;gap:8px;max-width:440px;margin:0 auto}
+.nl-form input{flex:1;padding:12px 16px;border-radius:8px;border:1px solid #e2e8f0;font-size:.88rem;font-family:'Inter',sans-serif;transition:border-color .15s}
+.nl-form input:focus{outline:none;border-color:#2563eb}
+.nl-form button{padding:12px 24px;border-radius:8px;background:#1e40af;color:#fff;border:none;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;font-size:.88rem;transition:background .15s}
+.nl-form button:hover{background:#1d4ed8}
+.nl-note{font-family:'Inter',sans-serif;font-size:.72rem;color:#94a3b8;margin-top:10px}
+
+/* Footer */
+footer{padding:40px 0;border-top:1px solid #e2e8f0;background:#fff}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;font-family:'Inter',sans-serif;font-size:.82rem;margin-bottom:24px}
+.footer-grid h4{font-size:.78rem;font-weight:700;color:#0f172a;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em}
+.footer-grid p{color:#64748b;line-height:1.6}
+.footer-grid ul{list-style:none}
+.footer-grid li{padding:3px 0}
+.footer-grid a{color:#64748b}
+.footer-grid a:hover{color:#1e40af}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:20px;border-top:1px solid #f1f5f9;font-family:'Inter',sans-serif;font-size:.75rem;color:#94a3b8}
+
+@media(max-width:900px){
+  .featured-grid{grid-template-columns:1fr}
   .two-col{grid-template-columns:1fr}
-  .hero h1{font-size:1.8rem}
+  .footer-grid{grid-template-columns:1fr 1fr}
   nav{display:none}
-  .newsletter-form{flex-direction:column}
+  .featured-img{height:180px}
+}
+@media(max-width:500px){
+  .footer-grid{grid-template-columns:1fr}
+  .nl-form{flex-direction:column}
 }
 </style>
 </head>
@@ -69,117 +143,184 @@ footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
 
 <header>
   <div class="container">
-    <div class="logo">Crypto<span>Insight</span></div>
+    <div class="logo"><i>CI</i> CryptoInsight</div>
     <nav>
-      <a href="/">Home</a>
-      <a href="#guides">Guides</a>
-      <a href="#defi">DeFi</a>
-      <a href="#trading">Trading</a>
-      <a href="#news">News</a>
+      <a href="/" class="active">Home</a>
+      <a href="#">DeFi</a>
+      <a href="#">Trading Guides</a>
+      <a href="#">Research</a>
+      <a href="#">Market Analysis</a>
+      <a href="#">Learn</a>
     </nav>
+    <div class="search sf">&#128269; Search</div>
   </div>
 </header>
 
-<section class="hero">
+<section class="featured">
   <div class="container">
-    <h1>Your Guide to Crypto Trading & DeFi</h1>
-    <p>Expert analysis, educational guides, and the latest insights on cryptocurrency, decentralized finance, and blockchain technology.</p>
+    <div class="featured-grid">
+      <article class="featured-main">
+        <div class="featured-img">&#128200;</div>
+        <div class="featured-body">
+          <span class="tag">DeFi Deep Dive</span>
+          <h2><a href="#">The Rise of Onchain Perpetual Futures: How DEXs Are Challenging Centralized Exchanges</a></h2>
+          <p>Decentralized perpetual futures platforms have grown from a niche experiment to processing billions in daily volume. We examine the technology behind onchain order books, how they achieve sub-second execution, and why institutional traders are taking notice.</p>
+          <div class="featured-meta">
+            <span class="author">By Alex Chen</span>
+            <span>Sep 4, 2026</span>
+            <span>12 min read</span>
+          </div>
+        </div>
+      </article>
+      <div class="featured-side">
+        <article class="featured-sm">
+          <span class="tag">Market Analysis</span>
+          <h3><a href="#">Bitcoin Holds $82K as Institutional Inflows Hit 6-Month High</a></h3>
+          <p>ETF inflows and on-chain metrics suggest sustained bullish momentum heading into Q4 2026.</p>
+          <div class="featured-meta"><span class="author">Sarah Kim</span><span>Sep 4, 2026</span></div>
+        </article>
+        <article class="featured-sm">
+          <span class="tag">Guide</span>
+          <h3><a href="#">How to Bridge Assets Safely Between Layer 1 and Layer 2 Networks</a></h3>
+          <p>A step-by-step guide to moving your crypto across chains without falling victim to bridge exploits.</p>
+          <div class="featured-meta"><span class="author">Mike Torres</span><span>Sep 3, 2026</span></div>
+        </article>
+        <article class="featured-sm">
+          <span class="tag">Research</span>
+          <h3><a href="#">Understanding Token Approvals: The Hidden Risk in Every DeFi Transaction</a></h3>
+          <p>Why unlimited token approvals can put your funds at risk, and how to protect yourself.</p>
+          <div class="featured-meta"><span class="author">Lisa Wang</span><span>Sep 2, 2026</span></div>
+        </article>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="posts">
+<section class="main">
   <div class="container">
     <div class="two-col">
       <div>
+        <div class="section-title">Latest Articles</div>
 
         <article class="post">
-          <div class="post-meta"><span>DeFi</span> September 4, 2026 &middot; 8 min read</div>
-          <h2><a href="#">What Are Perpetual Futures? A Complete Guide for Beginners</a></h2>
-          <p>Perpetual futures are one of the most popular instruments in crypto trading. Unlike traditional futures, they never expire, allowing traders to hold positions indefinitely. Learn how they work, how funding rates maintain price alignment, and why platforms like Hyperliquid have made them accessible to everyone.</p>
-          <a class="read-more" href="#">Read more &rarr;</a>
+          <span class="tag">Trading</span>
+          <h2><a href="#">Understanding Leverage in Crypto: A Risk Management Framework for 2026</a></h2>
+          <p>Leverage amplifies both gains and losses. This comprehensive guide covers how margin works on decentralized exchanges, calculating liquidation prices, position sizing strategies, and the psychological pitfalls that catch most leveraged traders off guard.</p>
+          <div class="meta"><span class="author">David Park</span><span>Sep 3, 2026</span><span>8 min read</span></div>
+          <a class="read-more" href="#">Continue reading &rarr;</a>
         </article>
 
         <article class="post">
-          <div class="post-meta"><span>Trading</span> September 3, 2026 &middot; 6 min read</div>
-          <h2><a href="#">Understanding Leverage in Crypto: Risks and Rewards</a></h2>
-          <p>Leverage allows traders to multiply their exposure to market movements, but it comes with significant risks. This guide covers how leverage works on decentralized exchanges, margin requirements, liquidation prices, and strategies to manage risk effectively when trading with 5x, 10x, or higher leverage.</p>
-          <a class="read-more" href="#">Read more &rarr;</a>
+          <span class="tag">Education</span>
+          <h2><a href="#">WalletConnect 2.0: Everything You Need to Know About Secure dApp Connections</a></h2>
+          <p>WalletConnect has become the standard for connecting mobile wallets to DeFi applications. Learn how the v2 protocol works, the role of relay servers, session management, and critical security practices to protect your assets when interacting with decentralized applications.</p>
+          <div class="meta"><span class="author">Emma Rodriguez</span><span>Sep 2, 2026</span><span>6 min read</span></div>
+          <a class="read-more" href="#">Continue reading &rarr;</a>
         </article>
 
         <article class="post">
-          <div class="post-meta"><span>Blockchain</span> September 2, 2026 &middot; 10 min read</div>
-          <h2><a href="#">How Onchain Order Books Are Changing DeFi Trading</a></h2>
-          <p>Traditional DEXs use Automated Market Makers (AMMs), but a new generation of protocols is bringing fully onchain order books to DeFi. Learn how platforms achieve sub-second execution, transparent matching, and zero gas fees while maintaining the security benefits of decentralization.</p>
-          <a class="read-more" href="#">Read more &rarr;</a>
+          <span class="tag">DeFi</span>
+          <h2><a href="#">Non-Custodial Trading Explained: Why Self-Custody Matters More Than Ever</a></h2>
+          <p>After the collapse of several centralized exchanges, the DeFi movement toward self-custody has accelerated dramatically. We explore how non-custodial exchanges work, the trade-offs compared to CEXs, and which platforms offer the best balance of security and user experience.</p>
+          <div class="meta"><span class="author">James Liu</span><span>Sep 1, 2026</span><span>9 min read</span></div>
+          <a class="read-more" href="#">Continue reading &rarr;</a>
         </article>
 
         <article class="post">
-          <div class="post-meta"><span>Guide</span> September 1, 2026 &middot; 5 min read</div>
-          <h2><a href="#">WalletConnect Explained: How to Safely Connect Your Wallet</a></h2>
-          <p>WalletConnect is the standard protocol for connecting mobile wallets to decentralized applications. This guide walks you through how it works, security best practices, how to verify dApp connections, and what to do if you suspect unauthorized access to your wallet.</p>
-          <a class="read-more" href="#">Read more &rarr;</a>
+          <span class="tag">Analysis</span>
+          <h2><a href="#">Top Layer 1 Blockchains for DeFi: Performance Benchmarks and Fee Comparison</a></h2>
+          <p>We benchmarked transaction throughput, finality times, and real-world gas costs across Ethereum, Solana, Avalanche, Arbitrum, Base, and purpose-built financial chains. The results reveal surprising performance gaps that directly impact trading costs.</p>
+          <div class="meta"><span class="author">Alex Chen</span><span>Aug 30, 2026</span><span>11 min read</span></div>
+          <a class="read-more" href="#">Continue reading &rarr;</a>
         </article>
 
         <article class="post">
-          <div class="post-meta"><span>Analysis</span> August 30, 2026 &middot; 7 min read</div>
-          <h2><a href="#">Top 5 Layer 1 Blockchains for DeFi in 2026</a></h2>
-          <p>The Layer 1 landscape continues to evolve rapidly. We compare Ethereum, Solana, Avalanche, Arbitrum, and emerging chains built specifically for financial applications. Discover which L1s offer the best performance, lowest fees, and strongest developer ecosystems for DeFi users.</p>
-          <a class="read-more" href="#">Read more &rarr;</a>
+          <span class="tag">Yield</span>
+          <h2><a href="#">Crypto Staking in 2026: Best Opportunities for Passive Income</a></h2>
+          <p>Staking remains one of the most reliable yield strategies in DeFi. We compare staking rewards across major networks, analyze the impact of restaking protocols, and evaluate whether liquid staking derivatives offer better risk-adjusted returns than native staking.</p>
+          <div class="meta"><span class="author">Sarah Kim</span><span>Aug 28, 2026</span><span>7 min read</span></div>
+          <a class="read-more" href="#">Continue reading &rarr;</a>
         </article>
 
         <article class="post">
-          <div class="post-meta"><span>Education</span> August 28, 2026 &middot; 9 min read</div>
-          <h2><a href="#">Non-Custodial vs Custodial Exchanges: What You Need to Know</a></h2>
-          <p>After several high-profile exchange collapses, more traders are moving to non-custodial solutions. Learn the fundamental differences between custodial and non-custodial exchanges, the trade-offs involved, and why self-custody is becoming the preferred choice for serious traders.</p>
-          <a class="read-more" href="#">Read more &rarr;</a>
+          <span class="tag">Security</span>
+          <h2><a href="#">How to Audit Your Wallet Permissions and Revoke Risky Approvals</a></h2>
+          <p>Every time you interact with a DeFi protocol, you grant token approvals that can persist indefinitely. Learn how to use tools like Revoke.cash and Etherscan to audit your active approvals, identify potentially dangerous contracts, and protect your portfolio.</p>
+          <div class="meta"><span class="author">Mike Torres</span><span>Aug 26, 2026</span><span>5 min read</span></div>
+          <a class="read-more" href="#">Continue reading &rarr;</a>
         </article>
 
         <article class="post">
-          <div class="post-meta"><span>DeFi</span> August 26, 2026 &middot; 6 min read</div>
-          <h2><a href="#">Staking Rewards in 2026: Where to Earn Passive Income with Crypto</a></h2>
-          <p>Staking remains one of the most reliable ways to earn passive income in crypto. We review the best staking opportunities across major networks, expected APY ranges, lock-up periods, and the risks you should consider before delegating your tokens.</p>
-          <a class="read-more" href="#">Read more &rarr;</a>
+          <span class="tag">Beginner</span>
+          <h2><a href="#">Crypto Trading for Beginners: From Wallet Setup to Your First Trade</a></h2>
+          <p>New to crypto? This step-by-step guide covers everything from choosing your first wallet, understanding different order types, reading candlestick charts, to placing your first trade on both centralized and decentralized exchanges.</p>
+          <div class="meta"><span class="author">Lisa Wang</span><span>Aug 24, 2026</span><span>15 min read</span></div>
+          <a class="read-more" href="#">Continue reading &rarr;</a>
         </article>
 
       </div>
 
-      <aside>
-        <div class="sidebar-section">
-          <h3>Popular Topics</h3>
-          <ul>
-            <li><a href="#">Perpetual Futures Trading</a></li>
-            <li><a href="#">DeFi Yield Strategies</a></li>
-            <li><a href="#">Wallet Security Guide</a></li>
-            <li><a href="#">Crypto Tax Basics</a></li>
-            <li><a href="#">L1 vs L2 Comparison</a></li>
-            <li><a href="#">Airdrop Farming Guide</a></li>
-            <li><a href="#">Cross-Chain Bridges</a></li>
-          </ul>
+      <aside class="sidebar">
+
+        <div class="widget widget-cta">
+          <h3>Weekly Newsletter</h3>
+          <p>Join 50,000+ readers. Get the best crypto analysis delivered every Monday.</p>
+          <a href="#newsletter" class="btn">Subscribe Free</a>
         </div>
-        <div class="sidebar-section">
-          <h3>About CryptoInsight</h3>
-          <p style="font-size:.85rem;color:#64748b;font-family:-apple-system,sans-serif">CryptoInsight is an independent publication covering cryptocurrency, DeFi, and blockchain technology. We provide educational content and market analysis to help traders make informed decisions.</p>
-        </div>
-        <div class="sidebar-section">
+
+        <div class="widget">
           <h3>Market Overview</h3>
+          <div class="market-row"><span class="market-name">Bitcoin</span><span class="market-price">$82,418</span><span class="market-change up">+2.3%</span></div>
+          <div class="market-row"><span class="market-name">Ethereum</span><span class="market-price">$2,451</span><span class="market-change up">+1.8%</span></div>
+          <div class="market-row"><span class="market-name">Solana</span><span class="market-price">$103.15</span><span class="market-change down">-0.9%</span></div>
+          <div class="market-row"><span class="market-name">HYPE</span><span class="market-price">$28.50</span><span class="market-change up">+5.2%</span></div>
+          <div class="market-row"><span class="market-name">BNB</span><span class="market-price">$687</span><span class="market-change up">+0.4%</span></div>
+          <div class="market-row"><span class="market-name">Arbitrum</span><span class="market-price">$1.12</span><span class="market-change down">-1.3%</span></div>
+          <div class="market-row"><span class="market-name">Total MCap</span><span class="market-price">$3.21T</span><span class="market-change up">+1.1%</span></div>
+        </div>
+
+        <div class="widget">
+          <h3>Trending Topics</h3>
           <ul>
-            <li>BTC: $82,400 <span style="color:#16a34a">+2.3%</span></li>
-            <li>ETH: $2,450 <span style="color:#16a34a">+1.8%</span></li>
-            <li>SOL: $103 <span style="color:#dc2626">-0.9%</span></li>
-            <li>HYPE: $28.50 <span style="color:#16a34a">+5.2%</span></li>
-            <li>Total Market: $3.2T</li>
+            <li><span class="num">01</span> <a href="#">Perpetual Futures Explained</a></li>
+            <li><span class="num">02</span> <a href="#">DeFi Yield Farming Strategies</a></li>
+            <li><span class="num">03</span> <a href="#">Wallet Security Best Practices</a></li>
+            <li><span class="num">04</span> <a href="#">Layer 2 Scaling Solutions</a></li>
+            <li><span class="num">05</span> <a href="#">Crypto Tax Guide 2026</a></li>
+            <li><span class="num">06</span> <a href="#">Airdrop Eligibility Checker</a></li>
+            <li><span class="num">07</span> <a href="#">Cross-Chain Bridge Comparison</a></li>
           </ul>
         </div>
+
+        <div class="widget">
+          <h3>About CryptoInsight</h3>
+          <p>CryptoInsight is an independent research publication founded in 2023. Our team of analysts and traders covers cryptocurrency markets, DeFi protocols, and blockchain technology with a focus on actionable education.</p>
+          <p style="margin-top:8px">We are not affiliated with any exchange or protocol. Our content is for educational purposes only and does not constitute financial advice.</p>
+        </div>
+
+        <div class="widget">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="#">DeFi Research</a> <span style="float:right;color:#94a3b8">24</span></li>
+            <li><a href="#">Trading Guides</a> <span style="float:right;color:#94a3b8">18</span></li>
+            <li><a href="#">Market Analysis</a> <span style="float:right;color:#94a3b8">31</span></li>
+            <li><a href="#">Security</a> <span style="float:right;color:#94a3b8">12</span></li>
+            <li><a href="#">Beginner Guides</a> <span style="float:right;color:#94a3b8">15</span></li>
+            <li><a href="#">Yield Strategies</a> <span style="float:right;color:#94a3b8">9</span></li>
+          </ul>
+        </div>
+
       </aside>
     </div>
 
-    <div class="newsletter">
-      <h2>Stay Updated</h2>
-      <p>Get the latest crypto insights delivered to your inbox weekly.</p>
-      <div class="newsletter-form">
-        <input type="email" placeholder="your@email.com">
+    <div class="newsletter" id="newsletter">
+      <h2>Stay Ahead of the Market</h2>
+      <p>Get weekly insights on DeFi trends, trading strategies, and market analysis. Trusted by 50,000+ readers.</p>
+      <div class="nl-form">
+        <input type="email" placeholder="Enter your email address">
         <button>Subscribe</button>
       </div>
+      <div class="nl-note">Free forever. No spam. Unsubscribe anytime.</div>
     </div>
 
   </div>
@@ -187,12 +328,44 @@ footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
 
 <footer>
   <div class="container">
-    <span>&copy; 2026 CryptoInsight. All rights reserved. For educational purposes only.</span>
-    <div class="footer-links">
-      <a href="/privacy">Privacy Policy</a>
-      <a href="/terms">Terms</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+    <div class="footer-grid">
+      <div>
+        <h4>CryptoInsight</h4>
+        <p>Independent crypto research and education since 2023. We help traders and investors navigate the world of decentralized finance with data-driven analysis and expert guides.</p>
+      </div>
+      <div>
+        <h4>Content</h4>
+        <ul>
+          <li><a href="#">DeFi Research</a></li>
+          <li><a href="#">Trading Guides</a></li>
+          <li><a href="#">Market Analysis</a></li>
+          <li><a href="#">Beginner Guides</a></li>
+          <li><a href="#">Security Tips</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Glossary</a></li>
+          <li><a href="#">Tools & Calculators</a></li>
+          <li><a href="#">Protocol Directory</a></li>
+          <li><a href="#">Newsletter Archive</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Editorial Policy</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 CryptoInsight. All rights reserved. Content is for educational purposes only and does not constitute financial advice.</span>
+      <span>Built with &#9829; for the crypto community</span>
     </div>
   </div>
 </footer>
